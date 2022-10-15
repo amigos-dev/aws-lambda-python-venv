@@ -4,6 +4,9 @@ lambda-venv: Easy creation of virtualenv layers for [AWS Lambda](https://docs.aw
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Latest release](https://img.shields.io/github/v/release/amigos-dev/aws-step-activity.svg?style=flat-square&color=b44e88)](https://github.com/amigos-dev/lambda-venv/releases)
 
+**NOT YET FUNCTIONAL--DO NOT USE**
+==================================
+
 A commandline tool and API for turning virtualenv directories into
 [AWS Lambda Layers](https://docs.aws.amazon.com/lambda/latest/dg/gettingstarted-package.html#gettingstarted-package-layers)
 for Python handlers.
@@ -97,6 +100,10 @@ TBD
 
 Known issues and limitations
 ----------------------------
+
+* "pip" must be installed in the virtualenv from which the layer is being created (it is used
+  to enumerate installed packages). It is automatically excluded from the generated layer artifact
+  dir.
 
 TBD
 

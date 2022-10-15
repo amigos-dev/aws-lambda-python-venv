@@ -5,7 +5,7 @@
 # MIT License - See LICENSE file accompanying this package.
 #
 
-"""lambda-venvc Command-line interface"""
+"""Command-line interface for this package"""
 
 # This module is run as a script or with "python3 -m"; all imports must be absolute
 

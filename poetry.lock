@@ -545,6 +545,14 @@ python-versions = ">=3.5,<4.0"
 packaging = ">=20.9"
 
 [[package]]
+name = "file-collection-hash"
+version = "1.0.0"
+description = "Stable, fast hash of collection of content of files and directories, optionally including permissions, dates, etc."
+category = "main"
+optional = false
+python-versions = ">=3.7,<4.0"
+
+[[package]]
 name = "gitdb"
 version = "4.0.9"
 description = "Git Object Database"
@@ -1259,7 +1267,7 @@ testing = ["pytest (>=6)", "pytest-checkdocs (>=2.4)", "pytest-flake8", "flake8 
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9df6c6400df1b27f27a679d2e3849bb6ea20135222911059b286cbda98624ace"
+content-hash = "89d0e98165cbdd36b72f4365720264dfac0ea9558e7b244fec247f2b59b5e814"
 
 [metadata.files]
 argcomplete = [
@@ -1342,6 +1350,10 @@ dotty-dict = []
 dunamai = [
     {file = "dunamai-1.13.2-py3-none-any.whl", hash = "sha256:d64974271c32d40ad097dceac43e411c87ca9f74d22ce55e03b358fa1adf624d"},
     {file = "dunamai-1.13.2.tar.gz", hash = "sha256:3bb079c1a84b3dd04a20071e6c914308caba125af98bcef537cabed1a628d989"},
+]
+file-collection-hash = [
+    {file = "file-collection-hash-1.0.0.tar.gz", hash = "sha256:002d7767b6d683f3d6986468ab1e07eb2ed35e3f9473e13d4b703bf398329b7d"},
+    {file = "file_collection_hash-1.0.0-py3-none-any.whl", hash = "sha256:bbb667416cb28eac24e9aec55add09d6ed92090c036c0c6b867f4831d299e852"},
 ]
 gitdb = [
     {file = "gitdb-4.0.9-py3-none-any.whl", hash = "sha256:8033ad4e853066ba6ca92050b9df2f89301b8fc8bf7e9324d412a63f8bf1a8fd"},
