@@ -1,4 +1,3 @@
-# lambda-venv
 lambda-venv: Easy creation of virtualenv layers for [AWS Lambda](https://docs.aws.amazon.com/lambda/index.html)
 ==============================================================
 
