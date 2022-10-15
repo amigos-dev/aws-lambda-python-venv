@@ -1,0 +1,80 @@
+[tool.poetry]
+name = "lambda-venv"
+version = "0.1.0"
+description = "Python library and commandline app that assist with adding a virtualenv to AWS lambda functions"
+authors = ["Sam McKelvie <sam@amigos.dev>"]
+license = "MIT"
+keywords = [ "AWS", "lambda", "layer", "virtualenv", "venv" ]
+readme = "README.md"
+homepage = "https://github.com/amigos-dev/lambda-venv"
+repository = "https://github.com/amigos-dev/lambda-venv.git"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.24.80"
+boto3-stubs = {extras = ["essential", "stepfunctions"], version = "^1.24.80"}
+PyYAML = "^6.0"
+argcomplete = "^2.0.0"
+"ruamel.yaml" = "^0.17.21"
+mypy-boto3-iam = "^1.24.59"
+mypy-boto3-logs = "^1.24.36.post1"
+mypy-boto3-sts = "^1.24.36.post1"
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.931"
+dunamai = "^1.9.0"
+python-semantic-release = "^7.25.2"
+types-urllib3 = "^1.26.11"
+types-PyYAML = "^6.0.5"
+pylint = "^2.13.5"
+
+[tool.semantic_release]
+branch = "main"
+version_variable = "lambda_venv/version.py:__version__"
+version_toml = "pyproject.toml:tool.poetry.version"
+upload_to_pypi = false
+upload_to_release = true
+build_command = "pip install poetry && poetry build"
+
+[tool.pylint."MESSAGES CONTROL"]
+disable = [
+    "wrong-import-order",
+    "duplicate-code",
+    "too-many-arguments",
+    "missing-function-docstring",
+    "import-outside-toplevel",
+    "too-few-public-methods",
+    "missing-class-docstring",
+    "unused-import",
+    "too-many-locals",
+    "unused-argument",
+    "invalid-name",
+    "no-self-use",
+    "global-statement",
+    "broad-except",
+    "too-many-branches",
+    "too-many-statements",
+    "exec-used",
+    "ungrouped-imports",
+    "subprocess-popen-preexec-fn",
+    "multiple-statements",
+    "too-many-public-methods",
+    "missing-module-docstring",
+    "too-many-instance-attributes",
+    "too-many-nested-blocks",
+    "unneeded-not",
+    "unnecessary-lambda",
+]
+
+[tool.pylint.FORMAT]
+indent-after-paren = 4
+indent-string = "  "
+max-line-length = 200
+indent = 4
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+lambda-venv = 'lambda_venv.__main__:run'
